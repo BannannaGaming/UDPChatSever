@@ -22,7 +22,7 @@ while not quitting:
             clients.append(addr)
         print time.ctime(time.time()) + str(addr) + ': :' + str(data)
         for client in clients:
-            s.sendto(data, clients)
+            s.sendto(data, client)
     except:
         pass
 s.close()
